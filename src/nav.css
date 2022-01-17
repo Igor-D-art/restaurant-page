@@ -1,21 +1,16 @@
-body{
-    display: flex;
-    flex-direction: column;
-}
-
 header {
     text-align: center;
     font-size: 7vh;
     color: rgb(0, 38, 255);
 }
 
-nav{
+nav {
     display: flex;
     width: 100vw;
 } 
 
-ul{
+ul {
     display: flex;
     width: 100vw;
     justify-content: space-around;
-}
+} 

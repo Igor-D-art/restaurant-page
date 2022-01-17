@@ -1,6 +1,6 @@
 import '../src/nav.css';
 
-const navigation = (function(){
+const header = (function(){
     // const content = document.querySelector('content')
     const body = document.querySelector('body');
     
@@ -28,6 +28,7 @@ const navigation = (function(){
                 let liItem = document.createElement('li');
                 let link = args[i]; // need to check this
                 liItem.innerHTML = link;
+                liItem.setAttribute('id', `${link}`);
                 list.appendChild(liItem);
                };
         };
@@ -50,4 +51,4 @@ const navigation = (function(){
 
 })();
 
-export {navigation};
+export {header};

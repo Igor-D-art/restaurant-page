@@ -1,18 +1,43 @@
-import {navigation} from './nav.js';
+import '../src/index.css';
+import {header} from './header.js';
 import {homePage} from './home.js';
+import {menu} from './menu.js';
+import {footer} from './footer.js';
+
 
 
 init ();
 
 function init () {
-    navigation.addHeader('The Ocean Pizza')
-    navigation.addNavi('Menu', 'About Us', 'Contacts');
-    navigation.addMain();
+    header.addHeader('The Ocean Pizza')
+    header.addNavi('Home','Menu', 'About Us', 'Contacts');
+    header.addMain();
     showHome();
+    showFooter();
+
+
+    // defining anchor links in menu 
+    const menuLink = document.querySelector('#Menu');
+    const homeLink = document.querySelector('#Home');
+
+    // adding event listeners to the menu items to display the right page
+    menuLink.addEventListener('click', ()=>{
+        let mainSection = document.querySelector('.main');
+        mainSection.innerText= '';
+        showMenu();
+    })
+
+    homeLink.addEventListener('click', ()=>{
+        let mainSection = document.querySelector('.main');
+        mainSection.innerText= '';
+        showHome();
+    })
+
 };
 
+
+// function to display the Home page
 function showHome (){
-    
     homePage.addTagline("Ocean View With Pizza For You And Your Family");
     homePage.addImg('/src/restaurant.jpg');
     homePage.addText(`In Italy, pizza served in formal settings, such as at a restaurant, is presented unsliced, 
@@ -32,6 +57,15 @@ function showHome (){
     [8] In 2009, upon Italy's request, Neapolitan pizza was registered with the European Union as a Traditional 
     Speciality Guaranteed dish,[9][10] and in 2017 the art of its making was included on UNESCO's list of 
     intangible cultural heritage.[11]`);
-    homePage.addFooter('JUST A FOOTER');
+    // homePage.addFooter('JUST A FOOTER');
+};
 
+// function to display the Menu page
+function showMenu (){
+    menu.addTagline ('Here is our menu!');
+};
+
+// function to display footer
+function showFooter (){
+    footer.addFooter('THIS IS JUST A FOOTER')
 };
