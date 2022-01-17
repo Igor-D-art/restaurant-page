@@ -1,3 +1,19 @@
-body{
-    ;
+.pizzas{
+    display: flex;
+    justify-content:space-between;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgb(68, 68, 68);
+}
+
+.pName{
+    display: flex;
+    border: 1px solid rgb(68, 68, 68);
+    justify-content: center;
+    padding: 5px;
 }

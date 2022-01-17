@@ -16,6 +16,7 @@ const homePage =(function(){
         // creating an image container and the image itself
         const img = document.createElement('img');
         img.setAttribute('src', link);
+        img.setAttribute('id', 'mainImg');
       
         //adding image to the page
         const main = document.querySelector('.main');
@@ -24,7 +25,7 @@ const homePage =(function(){
 
     const addText = (text)=>{
         const textDiv = document.createElement('div');
-        textDiv.classList.add('text');
+        textDiv.classList.add('mainText');
         textDiv.innerText=text;
         
         //adding text to the page
@@ -32,17 +33,6 @@ const homePage =(function(){
         main.appendChild(textDiv);
 
     };
-
-
-    // const addFooter= (text)=>{
-    //     // creating a header element
-    //     const footer = document.createElement('footer');
-    //     footer.innerHTML = text;
-        
-    //     // adding header with it's HTML content to the page
-    //     const body = document.querySelector('body');
-    //     body.appendChild(footer);
-    // };
 
     return {addTagline, addImg, addText};
 })();

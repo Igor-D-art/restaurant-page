@@ -1,4 +1,39 @@
+html{
+    display: flex;
+    justify-content: center;
+    height: 100%;
+}
+
 body{
     display: flex;
     flex-direction: column;
+    width: 100vw;
+    align-items: center;
+    height: 100%;
+   
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80vw;
+    flex: 1 0 auto;
+}
+
+.mainText {
+    width: 80vw;
+    text-align: center;
+}
+
+.tagline{
+    font-size: 40px;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#mainImg{
+    width: 1300px;
+    margin-bottom: 20px;
 }

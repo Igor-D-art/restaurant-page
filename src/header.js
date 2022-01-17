@@ -28,9 +28,10 @@ const header = (function(){
                 let liItem = document.createElement('li');
                 let link = args[i]; // need to check this
                 liItem.innerHTML = link;
+               //  liItem.classList.add(`${link}`);
                 liItem.setAttribute('id', `${link}`);
                 list.appendChild(liItem);
-               };
+               };  
         };
  
          // adding list items to the unordered list
