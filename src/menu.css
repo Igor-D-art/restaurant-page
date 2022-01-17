@@ -16,5 +16,6 @@ nav{
 
 ul{
     display: flex;
-    justify-items: center;
+    width: 100vw;
+    justify-content: space-around;
 }
