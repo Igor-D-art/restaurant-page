@@ -29,25 +29,19 @@ function init () {
     menuLink.addEventListener('click', ()=>{
         clearMain();
         showMenu();
-        menuLink.classList.add('active');
-        homeLink.classList.remove('active');
-        aboutLink.classList.remove('active');
+        menuLink.classList.toggle('active');
     })
 
     homeLink.addEventListener('click', ()=>{
         clearMain();
         showHome();
-        homeLink.classList.add('active');
-        aboutLink.classList.remove('active');
-        menuLink.classList.remove('active');
+        homeLink.classList.toggle('active');
     })
 
     aboutLink.addEventListener('click', ()=>{
         clearMain();
         showAbout();
-        aboutLink.classList.add('active');
-        menuLink.classList.remove('active');
-        homeLink.classList.remove('active');
+        aboutLink.classList.toggle('active');
     })
 
 };
